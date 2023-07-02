@@ -1,0 +1,185 @@
+1)Do the below programs in IIFE Function.
+
+
+
+
+
+
+
+
+ //a. Print odd numbers in an array 
+
+ 
+
+(function(...array){
+    //var array = [7,9,2,5,4,16,19,12,18,20];
+   
+     
+                  for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                })(7,9,2,5,4,16,19,12,18,20)
+output:7
+9
+5
+19
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+//b. Convert all the strings to title caps in a string array
+
+
+ 
+   (function titleCase (str){
+          str = str.toLowerCase().split(' ');
+        for (var i = 0; i < str.length; i++) {
+            str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+            console.log(str[i]);
+        } 
+        return str.join(' ');
+          
+      })("convert all the strings to title caps in a string array")
+      
+      
+output:Convert
+All
+The
+Strings
+To
+Title
+Caps
+In
+A
+String
+Array
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ //c)Sum of all numbers in an array
+
+ 
+ 
+   (function sumOf ()  {
+     const numbers = [1,2,3,4,5,6,7,8,9,10];
+  
+  const sumeOfNumber = numbers.reduce((x,y) => x+y);
+  
+  console.log(sumeOfNumber);
+ })()
+  
+output:55
+------------------------------------------------------------------------------------------------------------------------------------------
+
+ //d.  Return all the prime numbers in an array
+
+ 
+ 
+  (function primo (...primArray) {
+                      numArray = primArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  })(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19);
+
+
+output:
+[
+   1,  2,  3,  5, 7,
+  11, 13, 17, 19
+]
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+// e. Return all the palindromes in an array
+
+
+ (  function isPalindrome (arr, n)
+        {
+            // Traversing each element of the array
+            // and check if it is palindrome or not
+            for (let i = 0; i < n; i++)
+            {
+                let ans = isPalindrome(arr[i]);
+                if (ans == false)
+                    return false;
+            }
+            return true;
+        })([1,2,3] , 3)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+ // F. Return median of two sorted arrays of the same size.
+
+  
+  
+  (function findMedianSortedArrays   (nums1, nums2) {
+        
+    let arr = nums1.concat(nums2);
+    arr.sort((a,b)=>(a-b));
+    let n=arr.length;
+     
+    if(n%2===0)
+    {
+        return((arr[n/2]+arr[n/2-1])/2);
+    }
+    else{
+        return arr[Math.floor(n/2)];
+        
+    } 
+   console.log(arr);
+      
+    
+})( [1,3,5],[2,4,6])
+------------------------------------------------------------------------------------------------------------------------------------------
+//g. Remove duplicates from an array
+
+
+(function duplicate (array) {
+                       let dup = [...new Set(array)];
+                      console.log(dup);
+                      })(["a","a","b","c","c","e","s"]);
+                      
+      output:[ 'a', 'b', 'c', 'e', 's' ]
+------------------------------------------------------------------------------------------------------------------------------------------
+
+// h. Rotate an array by k times
+
+ 
+ 
+ (function arrayRotate (arr,numberOFshifts) {
+     for (let i = 0; i<numberOFshifts; i++){
+         arr.unshift(arr.pop());
+         console.log( arr);
+     }
+ })([1,2,3,4,5,6,7,8,9],4);
+  
+ 
+ output:[
+  9, 1, 2, 3, 4,
+  5, 6, 7, 8
+]
+[
+  8, 9, 1, 2, 3,
+  4, 5, 6, 7
+]
+[
+  7, 8, 9, 1, 2,
+  3, 4, 5, 6
+]
+[
+  6, 7, 8, 9, 1,
+  2, 3, 4, 5
+]
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ 
