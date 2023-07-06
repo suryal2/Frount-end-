@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
   <head>
     <title>XMLHttpRequest Example</title>
@@ -35,4 +36,43 @@
       xhr.send();
     </script>
   </body>
+=======
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+      //Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+
+      //Define HTTP method and URL
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      //Open the request
+      xhr.open(method, url)
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          //debugger
+          //Request was successful
+          console.log(xhr.responseText);
+          var countriesdetails = JSON.parse(xhr.responseText);
+          //var arrObj = details.entries;
+          //   console.log(details.entries);
+          for (var i = 0; i < countriesdetails.length; i++) {
+            console.log(countriesdetails[i].subregion);
+          }
+        } else {
+          //Request failed
+          console.log("Request failed", xhr.status);
+        }
+      };
+
+      //send the request
+      xhr.send();
+    </script>
+  </body>
+>>>>>>> a1704d604e0d1caa095f02ffd0ae238b0dedc2a7
 </html>

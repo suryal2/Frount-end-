@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 json resume:
 
@@ -29,3 +30,36 @@ output:
 }
 
 =======================================================================================================================================
+=======
+
+json resume:
+
+
+let jsonResume = '{"name":"surya ","age":23,"DOB":"30-08-1999","gender":"male", "phonenumber":7867945304,"degree":"B.SC.PHYSICS","ist":"SRM","couse":"FSD Mern","favoritgame":"valleyboll","favotitAthlete":"100 meter runing,fitness"}';
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+let jsonResume = '{"name":"surya ","age":23,"DOB":"30-08-1999","gender":"male", "phonenumber":7867945304,"degree":"B.SC.PHYSICS","ist":"SRM","couse":"FSD Mern","favoritgame":"valleyboll","favotitAthlete":"100 meter runing,fitness"}';
+ 
+  let  ObjResume  = JSON.parse(jsonResume ); 
+ console.log( ObjResume  );
+
+output:
+
+{
+  name: 'surya ',
+  age: 23,
+  DOB: '30-08-1999',
+  gender: 'male',
+  phonenumber: 7867945304,
+  degree: 'B.SC.PHYSICS',
+  ist: 'SRM',
+  couse: 'FSD Mern',
+  favoritgame: 'valleyboll',
+  favotitAthlete: '100 meter runing,fitness'
+}
+
+=======================================================================================================================================
+>>>>>>> a1704d604e0d1caa095f02ffd0ae238b0dedc2a7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1)Do the below programs in IIFE Function.
 
 
@@ -200,4 +201,208 @@ output:
 =================================================================================================================================================================
 
 
+=======
+1)Do the below programs in IIFE Function.
+
+
+
+
+
+
+
+
+ //a. Print odd numbers in an array 
+
+ 
+
+(function(...array){
+    //var array = [7,9,2,5,4,16,19,12,18,20];
+   
+     
+                  for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+                })(7,9,2,5,4,16,19,12,18,20)
+output:7
+9
+5
+19
+
+=================================================================================================================================================================================
+
+//b. Convert all the strings to title caps in a string array
+
+
+ 
+   (function titleCase (str){
+          str = str.toLowerCase().split(' ');
+        for (var i = 0; i < str.length; i++) {
+            str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+            console.log(str[i]);
+        } 
+        return str.join(' ');
+          
+      })("convert all the strings to title caps in a string array")
+      
+      
+output:Convert
+All
+The
+Strings
+To
+Title
+Caps
+In
+A
+String
+Array
+=====================================================================================================================================================================================
+
+
+
+ //c)Sum of all numbers in an array
+
+ 
+ 
+   (function sumOf ()  {
+     const numbers = [1,2,3,4,5,6,7,8,9,10];
+  
+  const sumeOfNumber = numbers.reduce((x,y) => x+y);
+  
+  console.log(sumeOfNumber);
+ })()
+  
+output:55
+================================================================================================================================================================================
+
+ //d.  Return all the prime numbers in an array
+
+ 
+ 
+  (function primo (...primArray) {
+                      numArray = primArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  })(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19);
+
+
+output:
+[
+   1,  2,  3,  5, 7,
+  11, 13, 17, 19
+]
+
+================================================================================================================================================================================
+
+
+
+
+//e .Return all the palindromes in an array on  IIFE Funchion
+
+ (function() {
+  var arr = ["pop","nun", "bib", 1331, "civic", "science","brodher" ,"ada"];
+
+  function isPalindrome(word) {
+    return word === word.split('').reverse().join('');
+  }
+
+  var palindromes = arr.filter(function(item) {
+    return isPalindrome(item.toString());
+  });
+
+  console.log(palindromes);
+})();
+
+
+
+output:
+
+[ 'pop', 'nun', 'bib', 1331, 'civic', 'ada' ]
+
+===============================================================================================================================================================================
+
+
+
+
+ // F. Return median of two sorted arrays of the same size.
+
+  
+ (function() {
+  var arr1 = [23,34,78];
+  var arr2 = [21, 49, 67];
+
+  var median = (function(arr1, arr2) {
+    var combined = arr1.concat(arr2);
+    combined.sort(function(a, b) {
+      return a - b;
+    });
+
+    var length = combined.length;
+    var midIndex = Math.floor(length / 2);
+
+    if (length % 2 === 0) {
+      return (combined[midIndex - 1] + combined[midIndex]) / 2;
+    } else {
+      return combined[midIndex];
+    }
+  })(arr1, arr2);
+
+  console.log(median);
+})();
+ 
+output:
+
+41.5
+
+========================================================================================================================================================================
+
+//g. Remove duplicates from an array
+
+
+(function duplicate (array) {
+                       let dup = [...new Set(array)];
+                      console.log(dup);
+                      })(["a","a","b","c","c","e","s"]);
+                      
+      output:[ 'a', 'b', 'c', 'e', 's' ]
+---========================================================================================================================================================================
+
+// h. Rotate an array by k times
+
+ 
+ 
+ (function arrayRotate (arr,numberOFshifts) {
+     for (let i = 0; i<numberOFshifts; i++){
+         arr.unshift(arr.pop());
+         console.log( arr);
+     }
+ })([1,2,3,4,5,6,7,8,9],4);
+  
+ 
+ output:[
+  9, 1, 2, 3, 4,
+  5, 6, 7, 8
+]
+[
+  8, 9, 1, 2, 3,
+  4, 5, 6, 7
+]
+[
+  7, 8, 9, 1, 2,
+  3, 4, 5, 6
+]
+[
+  6, 7, 8, 9, 1,
+  2, 3, 4, 5
+]
+=================================================================================================================================================================
+
+
+>>>>>>> a1704d604e0d1caa095f02ffd0ae238b0dedc2a7
  
