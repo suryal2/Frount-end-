@@ -1,0 +1,150 @@
+2) https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+
+
+
+
+ //1) +Circle(radius:double,color:string)
+ 
+ class Circle{
+     constructor(radius,color){
+         this.radius=radius;
+         this.color=color;
+     }
+       
+ }
+ var cir =new Circle( 1.0, "red");
+ console.log(cir);
+  
+//output:Circle { radius: 1, color: 'red' }
+
+------------------------
+// +Circle(radius:double)
+ 
+ class Circle{
+     constructor(radius ){
+         this.radius=radius;
+          
+     }
+       
+ }
+ var cir =new Circle( 1.0);
+ console.log(cir);
+  
+output:Circle { radius: 1 }
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// 2) +getArea:double and +getCircumference():double
+ 
+ class Circle{
+     constructor(radius){
+         this.radius=radius;
+     }
+      getCircumference() {
+    return 2 * Math.PI * this.radius;
+  }
+   getArea(){
+       return Math.PI*this.radius*this.radius;
+  }
+ }
+ var cir =new Circle( 1.0);
+ console.log(cir.getCircumference());
+ console.log(cir.getArea());
+
+
+//output: 6.283185307179586
+3.141592653589793
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------ -------------------------------------------
+//3) +getRadius():double and +setRadius( ):double:  viod
+
+
+class  Circle {
+  constructor( radius) {
+    this. radius = "";
+  }
+   getRadius(){
+      return "circle color is"+this.color+" color"
+  }
+
+  setRadius(radius) {
+    this. radius =  radius;
+    // No return statement or explicit return value
+  }
+}
+
+const  cir = new  Circle();
+ cir. setRadius ( 1.0);
+console.log( cir. radius); 
+console.log(cir. getRadius());
+
+
+//output: 1
+          circle color isundefined color
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+//4) +getcolor() and +setColor( ): string;viod
+
+
+class  Circle {
+  constructor(color) {
+    this.color = "";
+  }
+  getcolor(){
+      return "circle color is"+this.color+" color"
+  }
+
+  setColor(color) {
+    this.color = color;
+    // No return statement or explicit return value
+  }
+}
+
+const  cir = new  Circle();
+ cir.setColor ( "red");
+console.log( cir.color); 
+console.log(cir.getcolor());
+
+
+//output:  red
+circle color isred color
+
+
+
+-------------------------------------------------------------------------------------------------------------- 
+
+
+// 5) +toString
+
+
+ class Circle{
+     constructor(radius, color){
+         this.radius=radius;
+         this.color=color;
+     }
+     
+ toString() {
+     return `MyClass: property1 = ${this.radius}, property2 = ${this.color}`;
+  }
+ 
+ }
+ 
+ var cir = new Circle( 1.0,"red");
+ 
+ console.log(cir.toString());
+ 
+ 
+ output:  Circle: property1 = 1, property2 = red
+
+
+

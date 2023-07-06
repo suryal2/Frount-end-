@@ -1,0 +1,33 @@
+3) Write a “person” class to hold all the details.
+
+
+
+
+ class Person{
+     constructor(name,age,gender,dob,aadhernumber,phoneno){
+         this.name=name;
+         this.age =age;
+         this.gender=gender;
+         this.dob=dob;
+         this.aadhernumbrt=aadhernumber;
+         this.phoneno=phoneno;
+     }
+ }
+ 
+ 
+ 
+ var persondetail = new Person("surya","23","male","30-08-1999","9955 7573 7893","867945304")
+ console.log(persondetail);
+
+
+
+output:
+
+Person {
+  name: 'surya',
+  age: '23',
+  gender: 'male',
+  dob: '30-08-1999',
+  aadhernumbrt: '9955 7573 7893',
+  phoneno: '867945304'
+}

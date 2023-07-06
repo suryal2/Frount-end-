@@ -1,0 +1,44 @@
+//4. write a class to calculate the uber price.
+
+
+
+class  uber{
+     constructor( startprise,waitingcharge,returnprise ){
+          
+         this.startingprise=startprise;
+         this.waitingcharge=waitingcharge;
+         this.returningprise=returnprise;
+          
+     }
+     getprise(){
+         return  this.waitingcharge+  this.startingprise +this.returningprise  ; 
+     }
+     getprise1(){   
+         return this.waitingcharge*  this.startingprise *this.returningprise  ; 
+     }
+     getprise2(){     
+          return this.waitingcharge/  this.startingprise /this.returningprise  ; 
+     }
+     getprise3(){ 
+          return this.waitingcharge%  this.startingprise %this.returningprise  ; 
+         
+     }
+ }
+ 
+ 
+ 
+ var money = new uber( 1500,200,2000);
+ console.log(money.getprise());
+ console.log(money.getprise1());
+ console.log(money.getprise2());
+ console.log(money.getprise3());
+
+
+//output:
+
+3700
+600000000
+0.00006666666666666667
+200
+
+

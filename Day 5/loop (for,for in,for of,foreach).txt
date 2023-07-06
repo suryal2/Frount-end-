@@ -1,0 +1,215 @@
+//For the given JSON iterate over all for loops(for,for in,for of,forEach)
+
+//1)for loop
+
+let jsonResume = '{"name":"surya ","age":23,"DOB":"30-08-1999","gender":"male", "phonenumber":7867945304,"ambition":"FSD Mern","favoritgame":"valleyboll","favotitAthlete":"100 meter runing,fitness"}';
+let jsonInfermation= '{"country":"india","state":"tamilnadu","distric":"kancheepurm","village":"pullalur"}';
+ let jsonPopulation = '{"male": 4,"female": 93,"others": 10}';
+
+ 
+
+  let  objA  = JSON.parse( jsonResume ); 
+  console.log(objA);
+  let objB =JSON.parse(jsonInfermation);
+  console.log(objB);
+  let objC =JSON.parse(jsonPopulation);
+  console.log(objC);
+
+   let objJson ={objA,objB,objC};
+  
+  for(let i=0; i<objJson.length; i++){
+  console.log(objJson[i]);
+  }
+
+
+output:
+
+{
+  name: 'surya ',
+  age: 23,
+  DOB: '30-08-1999',
+  gender: 'male',
+  phonenumber: 7867945304,
+  ambition: 'FSD Mern',
+  favoritgame: 'valleyboll',
+  favotitAthlete: '100 meter runing,fitness'
+}
+{
+  country: 'india',
+  state: 'tamilnadu',
+  distric: 'kancheepurm',
+  village: 'pullalur'
+}
+{ male: 4, female: 93, others: 10 }
+
+  
+---------------------------------------------------------------------------  
+ //for loop:
+
+
+var jsonResume = '{"name":"surya ","age":23,"DOB":"30-08-1999","gender":"male", "phonenumber":7867945304,"ambition":"FSD Mern","favoritgame":"valleyboll"}' 
+ 
+ 
+  var resumedetails = JSON.parse( jsonResume);
+  console.log(resumedetails);
+          
+          for (var i = 0; i < resumedetails.length; i++) {
+            console.log(resumedetails[i].name);
+          } 
+output:
+
+{
+  name: 'surya ',
+  age: 23,
+  DOB: '30-08-1999',
+  gender: 'male',
+  phonenumber: 7867945304,
+  ambition: 'FSD Mern',
+  favoritgame: 'valleyboll'
+}
+
+=======================================================================================================================================
+
+
+//For in:
+
+let jsonResume = '{"name":"surya ","age":23,"DOB":"30-08-1999","gender":"male", "phonenumber":7867945304,"ambition":"FSD Mern","favoritgame":"valleyboll","favotitAthlete":"100 meter runing,fitness"}';
+ 
+let objA  = JSON.parse(jsonResume); 
+ console.log(objA);
+ 
+
+ for (let key in objA) {
+   console.log(key + ": "+ objA[ key])
+}
+
+
+output:
+
+{
+  name: 'surya ',
+  age: 23,
+  DOB: '30-08-1999',
+  gender: 'male',
+  phonenumber: 7867945304,
+  ambition: 'FSD Mern',
+  favoritgame: 'valleyboll',
+  favotitAthlete: '100 meter runing,fitness'
+}
+name: surya 
+age: 23
+DOB: 30-08-1999
+gender: male
+phonenumber: 7867945304
+ambition: FSD Mern
+favoritgame: valleyboll
+favotitAthlete: 100 meter runing,fitness
+====================================================================================================================================
+
+
+ //FOR OF  
+   
+   
+   
+let jsonInfermation= '{"country":"  india","state":"tamilnadu","distric":"kancheepurm","village":"pullalur"}';
+ 
+
+ 
+
+  let  objA  = JSON.parse( jsonInfermation ); 
+  console.log(objA);
+ 
+  let objJson1 ={objA , *[Symbol.iterator]() { yield* Object.values(this) }};
+ 
+ 
+for(var key of objJson1) {
+  console.log(key);
+}
+
+
+output:
+
+{
+  country: '  india',
+  state: 'tamilnadu',
+  distric: 'kancheepurm',
+  village: 'pullalur'
+}
+{
+  country: '  india',
+  state: 'tamilnadu',
+  distric: 'kancheepurm',
+  village: 'pullalur'
+}
+
+=================================================================================================================================
+
+//forEach
+ 
+let jsonRsume = '{"name":"surya ","age":23,"DOB":"30-08-1999","gender":"male", "phonenumber":7867945304,"ambition":"FSD Mern","favoritgame":"valleyboll","favotitAthlete":"100 meter runing,fitness"}';
+ 
+ 
+  let  objA  = JSON.parse( jsonRsume ); 
+  console.log(objA);
+ 
+    
+   
+   Object. keys( objA).forEach( key => {
+  console.log(key, objA[key]);
+});
+
+output:
+
+{
+  name: 'surya ',
+  age: 23,
+  DOB: '30-08-1999',
+  gender: 'male',
+  phonenumber: 7867945304,
+  ambition: 'FSD Mern',
+  favoritgame: 'valleyboll',
+  favotitAthlete: '100 meter runing,fitness'
+}
+name surya 
+age 23
+DOB 30-08-1999
+gender male
+phonenumber 7867945304
+ambition FSD Mern
+favoritgame valleyboll
+favotitAthlete 100 meter runing,fitness
+----------------------------------------------------------
+//forEach
+ 
+let jsonRsume = '{"name":"surya ","age":23,"DOB":"30-08-1999","gender":"male", "phonenumber":7867945304,"ambition":"FSD Mern","favoritgame":"valleyboll","favotitAthlete":"100 meter runing,fitness"}';
+ 
+ 
+  let  objA  = JSON.parse( jsonRsume ); 
+  console.log(objA);
+ 
+ 
+Object.values(objA).forEach(val => {
+  console.log(val);
+});
+
+output:
+
+{
+  name: 'surya ',
+  age: 23,
+  DOB: '30-08-1999',
+  gender: 'male',
+  phonenumber: 7867945304,
+  ambition: 'FSD Mern',
+  favoritgame: 'valleyboll',
+  favotitAthlete: '100 meter runing,fitness'
+}
+surya 
+23
+30-08-1999
+male
+7867945304
+FSD Mern
+valleyboll
+100 meter runing,fitness
+======================================================================================================================================
